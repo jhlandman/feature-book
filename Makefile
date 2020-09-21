@@ -11,3 +11,6 @@ regen-toc:
 
 open-ind:
 	open feature_engineering/_build/html/index.html
+
+update-ghp:
+	ghp-import -n -p -f feature-engineering/_build/html
