@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to your Jupyter Book &#8212; feature-engineering</title>
+    <title>Introducing feature engineering (FE) &#8212; feature-engineering</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -38,7 +38,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Content in Jupyter Book" href="content.html" />
+    <link rel="next" title="Content with notebooks" href="notebooks.html" />
+    <link rel="prev" title="Content in Jupyter Book" href="content.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -73,15 +74,25 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="#">
-   Welcome to your Jupyter Book
+  <a class="reference internal" href="markdown.html">
+   Markdown Files
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="content.html">
    Content in Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introducing feature engineering (FE)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   Content with notebooks
   </a>
  </li>
 </ul>
@@ -153,7 +164,14 @@
             <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
-            
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#allowing-for-fe-in-financial-data">
+   Allowing for FE in financial data
+  </a>
+ </li>
+</ul>
+
         </nav>
     </div>
 </div>
@@ -162,12 +180,32 @@
         
               <div>
                 
-  <div class="section" id="welcome-to-your-jupyter-book">
-<h1>Welcome to your Jupyter Book<a class="headerlink" href="#welcome-to-your-jupyter-book" title="Permalink to this headline">¶</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.</p>
-<p>Check out the content pages bundled with this sample book to get started.</p>
-<div class="toctree-wrapper compound">
+  <div class="section" id="introducing-feature-engineering-fe">
+<h1>Introducing feature engineering (FE)<a class="headerlink" href="#introducing-feature-engineering-fe" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is loosely derived from a reading of <a class="bibtex reference internal" href="markdown.html#artoffe" id="id1">[Dub20]</a></p>
+</div>
+<p>If you construct a statistical model of a real world phenomenon, and the model
+poorly predicts that phenomenon, traditional avenues for improving on the result
+are fairly limited. The first avenue is to increase the volume of data fed into
+the model, and the second is to use a different model. However, there is a
+third option, you could use feature engineering to modify the data inputs so
+that they better capture the nature of the problem.</p>
+<div class="section" id="allowing-for-fe-in-financial-data">
+<h2>Allowing for FE in financial data<a class="headerlink" href="#allowing-for-fe-in-financial-data" title="Permalink to this headline">¶</a></h2>
+<p>Distinguishing raw data from features makes explicit the modelling decision
+involved in picking and assembling feature sets. Most financial data come in
+form of timeseries. Each unique row, i.e. an observation associated to a
+security on a specific date, is called an <em>instance</em> in the machine learning
+context, and the columns, i.e. security attributes on a specific date, are
+called <em>features</em>. Financial feature engineering is defined as:</p>
+<blockquote>
+<div><p>The process of representing a problem domain to make it amenable for learning
+techniques. This process involves the initial discovery of features and their
+stepwise improvement based on financial domain knowledge and the observed
+performance of a given ML algorithm over specific financial training data.</p>
+</div></blockquote>
 </div>
 </div>
 
@@ -199,7 +237,8 @@ structured.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="content.html" title="next page">Content in Jupyter Book</a>
+    <a class='left-prev' id="prev-link" href="content.html" title="previous page">Content in Jupyter Book</a>
+    <a class='right-next' id="next-link" href="notebooks.html" title="next page">Content with notebooks</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
