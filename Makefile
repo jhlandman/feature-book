@@ -13,4 +13,4 @@ open-ind:
 	open feature_engineering/_build/html/index.html
 
 update-ghp:
-	ghp-import -n -p -f feature-engineering/_build/html
+	ghp-import -n -p -f feature_engineering/_build/html
